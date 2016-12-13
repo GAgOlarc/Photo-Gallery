@@ -3,16 +3,20 @@
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img id="image">');
-var $caption = $("<p></p>");
-var $title = $("<p></p>");
+//var $caption = $("<p></p>");
+var $title = $('<p id="title"></p>');
 var $leftArrow = $('<img id="previous" src="photos/left_arrow.png">');
 var $rightArrow = $('<img id="next" src="photos/right_arrow.png">');
+
+// Variable to keep track of which overlay
+// image is in use
+var $index = 0;
 
 //An image to overlay
 $overlay.append($image);
 
 //A caption to overlay
-$overlay.append($caption);
+//$overlay.append($caption);
 
 //A title to overlay
 $overlay.append($title);
@@ -27,20 +31,18 @@ $("body").append($overlay);
 //Capture the click event on a link to an image
 $("#imageGallery a").click(function (event) {
     event.preventDefault();
+
     var imageLocation = $(this).attr("href");
+    var imageTitle = $(this).attr("title");
 
     //Update overlay with the image linked in the link
-    $image.attr("href", imageLocation);
+    $image.attr("src", imageLocation);
+
+    //Update overlay with the title
+    $title.text(imageTitle);
 
     //Show the overlay
     $overlay.show();
-
-    //Get child's alt attribute and set caption
-    var captionText = $(this).children("img").attr("alt");
-    $caption.text(captionText);
-
-    var titleText = $(this).children("img").attr("title");
-    $title.text(titleText);
 
 });
   

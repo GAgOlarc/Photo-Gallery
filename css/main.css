@@ -25,6 +25,10 @@ input {
     min-height: calc(100vh - 200px);
 }
 
+#imageGallery p {
+    color: black;
+}
+
 ul {
     list-style: none;
     margin: 0 auto;
@@ -76,6 +80,10 @@ a {
   /*position: relative;*/
   margin-top: 80px;
   width: 800px;
+}
+
+#title {
+    color: red;
 }
 
 #previous {
