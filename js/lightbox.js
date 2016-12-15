@@ -95,6 +95,24 @@ $("#next").click(function(event){
   console.log($index + ' right');
 });
 
+//BUTTON EVENTS
+	// if left arrow or key 37 is pressed, go left
+	// if right arrow or key 39 is pressed, go right
+
+$(document).on( "keydown", function( event ) {
+
+		// left keydown
+		if (event.which === 37) {
+			arrows(true);
+	  	console.log($index + ' left');
+		}
+		// right keydown
+		if (event.which === 39) {
+			arrows();
+	  	console.log($index + ' right');
+		}
+});
+
 //When overlay is clicked 
 $overlay.click(function(event){
   //Hide the overlay
