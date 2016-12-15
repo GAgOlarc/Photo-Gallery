@@ -46,23 +46,17 @@ $("#imageGallery a").click(function (event) {
     var imageTitle = $(this).attr("title");
 
     //update index to current selected image	
-	$index = $(this).index();
+    $index = $(this).parent().index();
+    console.log($index);
 
     /* Update overlay image and caption
-	   with the image that was clicked on
-	   by using updateImage function */
-	updateImage(imageLocation, imageTitle);
+    with the image that was clicked on
+    by using updateImage function */
+    updateImage(imageLocation, imageTitle);
 
     //Show the overlay
     $overlay.show();
 
-});
-  
-
-//When overlay is clicked 
-$overlay.click(function(){
-  //Hide the overlay
-  $overlay.hide();
 });
 
 //Arrows function
@@ -99,6 +93,13 @@ $("#previous").click(function(event){
 $("#next").click(function(event){
   arrows();
   console.log($index + ' right');
+});
+
+//When overlay is clicked 
+$overlay.click(function(event){
+  //Hide the overlay
+  if(event.target.id == "overlay")
+    $(this).hide();
 });
 
 
