@@ -83,18 +83,6 @@ var arrows = function (left) {
     updateImage(imageLocation, imageTitle);
 }
 
-//Button events
-
-$("#previous").click(function(event){
-  arrows(true);
-  console.log($index + ' left');
-});
-
-$("#next").click(function(event){
-  arrows();
-  console.log($index + ' right');
-});
-
 //BUTTON EVENTS
 	// if left arrow or key 37 is pressed, go left
 	// if right arrow or key 39 is pressed, go right
@@ -112,6 +100,19 @@ $(document).on( "keydown", function( event ) {
 	  	console.log($index + ' right');
 		}
 });
+
+//Left arrow click
+$("#previous").click(function(event){
+  arrows(true);
+  console.log($index + ' left');
+});
+
+//Right arrow click
+$("#next").click(function(event){
+  arrows();
+  console.log($index + ' right');
+});
+
 
 //When overlay is clicked 
 $overlay.click(function(event){
