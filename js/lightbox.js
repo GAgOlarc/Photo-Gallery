@@ -56,7 +56,6 @@ $("#imageGallery a").click(function (event) {
 
     //Show the overlay
     $overlay.show();
-
 });
 
 //Arrows function

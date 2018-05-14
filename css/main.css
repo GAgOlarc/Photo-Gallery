@@ -77,7 +77,6 @@ a {
 }
 
 #image {
-  /*position: relative;*/
   margin-top: 80px;
   width: 800px;
 }
@@ -87,8 +86,6 @@ a {
 }
 
 #previous {
-    /*color: red;*/
-    /*font-size: x-large;*/
     position: absolute;
     width: 50px;
     top: 35%;
@@ -96,8 +93,6 @@ a {
 }
 
 #next {
-    /*color: red;
-    font-size: x-large;*/
     position: absolute;
     width: 50px;
     top: 35%;
