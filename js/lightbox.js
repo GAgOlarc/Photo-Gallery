@@ -47,7 +47,6 @@ $("#imageGallery a").click(function (event) {
 
     //update index to current selected image	
     $index = $(this).parent().index();
-    console.log($index);
 
     /* Update overlay image and caption
     with the image that was clicked on
@@ -91,25 +90,21 @@ $(document).on( "keydown", function( event ) {
 		// left keydown
 		if (event.which === 37) {
 			arrows(true);
-	  	console.log($index + ' left');
 		}
 		// right keydown
 		if (event.which === 39) {
 			arrows();
-	  	console.log($index + ' right');
 		}
 });
 
 //Left arrow click
 $("#previous").click(function(event){
   arrows(true);
-  console.log($index + ' left');
 });
 
 //Right arrow click
 $("#next").click(function(event){
   arrows();
-  console.log($index + ' right');
 });
 
 

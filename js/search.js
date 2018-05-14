@@ -4,9 +4,9 @@ function contains(text_one, text_two) {
 }
 
 $("#filter_search").keyup(function () {
-    var seacrhText = $("#filter_search").val().toLowerCase()
+    var searchText = $("#filter_search").val().toLowerCase()
     $("ul li").each(function () {
-        if (!contains($(this).text().toLowerCase(), seacrhText))
+        if (!contains($(this).text().toLowerCase(), searchText))
             $(this).hide();
         else
             $(this).show();

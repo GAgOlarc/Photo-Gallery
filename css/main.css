@@ -86,17 +86,17 @@ a {
 }
 
 #previous {
-    position: absolute;
+    position: relative;
     width: 50px;
-    top: 35%;
-    left: 10%;
+    top: -350px;
+    left: -440px;
 }
 
 #next {
-    position: absolute;
+    position: relative;
     width: 50px;
-    top: 35%;
-    right: 10%;
+    top: -350px;
+    right: -440px;
 }
 
 
